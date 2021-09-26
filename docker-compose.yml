@@ -20,7 +20,7 @@ services:
       POSTGRES_PASSWORD: student # The PostgreSQL password (useful to connect to the database)
       POSTGRES_DB: studentdb # The PostgreSQL default database (automatically created at first launch)
     volumes:
-      - ./db-data:/var/lib/postgresql/data/
+      - ./../db-data:/var/lib/postgresql/data/
   
 
   pg_admin:
@@ -34,6 +34,6 @@ services:
       PGADMIN_DEFAULT_PASSWORD: postgres
       PGADMIN_LISTEN_PORT: 5052
     volumes:
-      - ./pgadmin:/var/lib/pgadmin
+      - ./../pgadmin:/var/lib/pgadmin
     ports:
     - 5052:5052
